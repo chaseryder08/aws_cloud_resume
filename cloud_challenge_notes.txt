@@ -1,0 +1,10 @@
+cloud resume challenge notes: Youtube Aussie guy
+
+IaC benefits:
+code can show when changes were made - stored in source control / github
+
+good for collaborating w/ others
+
+IaC: Terraform, SAM, 
+terraform good tool - scales across other cloud platforms / azure, aws, google
+

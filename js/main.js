@@ -46,6 +46,28 @@
 
     }; // end ssParallax
 
+    /* website counter
+    * ---------------------------- */
+   const count = document.getElementById("count");
+
+   incrementVisitsCount();
+
+   function incrementVisitsCount() {
+    let visits;
+    visits = "5";
+
+    if (!localStorage.getItem("visits")) localStorage.setItem("visits", 1)
+
+    visits = +localStorage.getItem("visits");
+    const incrementedCount = visits + 1;
+    
+    localStorage.setItem("visits", incrementedCount)
+
+    count.innerText = localStorage.getItem("visits");
+
+   }
+
+   console.log(count);
 
    /* Move header menu
     * -------------------------------------------------- */

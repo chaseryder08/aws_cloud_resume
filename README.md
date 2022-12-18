@@ -5,14 +5,14 @@ I completed the [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/t
 My deployed resume website can be found [here]("https://chasedecosterresume.com).
 
 ## FRONT-END DIAGRAM:
-![This is an image]("/front_end.png")
+![This is an image](/front_end.png)
 The frontend portion of this project was built using AWS S3, which hosted my static website consisting of HTML, CSS, and JavaScript files. I purchased my domain name from AWS Route53, which pointed internet traffic to a AWS CloudFront  distribution. Cloudfront would cache my files from S3, and serve my website content to users. AWS Certificate manager was also used to establish a TLS connection between the client, which provides a secure HTTPS connection. 
 
 ## CI/CD
 GitHub actions was used to sync my S3 bucket when code was uploaded to my repository. After files are uploaded, Cloudfront cache is invalidated, which provides real-time updates with any code/website changes.
 
 ## BACKEND DIAGRAM:
-![This is an image]("/back_end.png")
+![This is an image](/back_end.png)
 The backend portion was built with IaC (Terraform) to provision AWS DynamoDB, Lambda and API Gateway services. Once the website is visited, Javascript code makes an API call to AWS API Gateway; this call then triggers a Lambda function written in Python, to access AWS DyanmoDB, and retreive the current visitor count data. It then will add 1+ to the count attribute, and returns the updated visitor count value and displays it on the screen/website. 
 
 ## CI/CD
